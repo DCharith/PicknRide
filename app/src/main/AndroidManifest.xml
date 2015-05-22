@@ -15,12 +15,13 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
+        android:icon="@mipmap/action_bar_icon"
+        android:label="Pick n Ride"
         android:theme="@style/AppTheme" >
         <activity
             android:name=".LoginActivity"
-            android:label="@string/app_name" >
+            android:icon="@mipmap/action_bar_icon"
+            android:label="" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -29,6 +30,7 @@
         </activity>
         <activity
             android:name=".HomeActivity"
+            android:icon="@mipmap/action_bar_icon"
             android:label="@string/title_activity_main" >
         </activity>
 
@@ -41,11 +43,28 @@
 
         <activity
             android:name=".MapsActivity"
-            android:label="@string/title_activity_maps" >
+            android:icon="@mipmap/action_bar_icon"
+            android:label="Driver Mode" >
         </activity>
         <activity
             android:name=".RegistrationActivity"
-            android:label="@string/title_activity_" >
+            android:icon="@mipmap/action_bar_icon"
+            android:label="" >
+        </activity>
+        <activity
+            android:name=".WelcomeActivity"
+            android:icon="@mipmap/action_bar_icon"
+            android:label="@string/title_activity_welcome" >
+        </activity>
+        <activity
+            android:name=".ChooseModeActivity"
+            android:icon="@mipmap/action_bar_icon"
+            android:label="@string/title_activity_choose_mode" >
+        </activity>
+        <activity
+
+            android:name=".FragmentDrawerActivity"
+            android:label="" >
         </activity>
     </application>
 

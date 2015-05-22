@@ -1,0 +1,59 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blue_app_background"
+    tools:context="com.example.nova.picknride.FindPeopleFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/blue_app_background">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="181dp"
+                android:layout_height="181dp"
+                android:id="@+id/profilePic"
+                android:layout_toRightOf="@+id/name_rating"
+                android:src="@mipmap/ic_passenger_mode"
+                />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/name_rating">
+
+                <TextView
+                    android:paddingTop="20dp"
+                    android:paddingBottom="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Charith Epitawatta"
+                    android:layout_alignParentTop="true"
+                    android:id="@+id/nameTV" />
+
+                <RatingBar
+                    style="?android:attr/ratingBarStyleSmall"
+                    android:paddingTop="10dp"
+                    android:layout_below="@+id/nameTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:numStars="5"
+                    android:stepSize="0.1"
+                    android:id="@+id/ratingBar" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+</FrameLayout>

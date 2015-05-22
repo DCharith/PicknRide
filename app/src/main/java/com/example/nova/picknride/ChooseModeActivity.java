@@ -8,48 +8,40 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-import android.widget.CheckBox;
-import android.widget.CompoundButton;
-import android.widget.LinearLayout;
-import android.widget.RadioButton;
+import android.widget.ImageButton;
 
 
-public class RegistrationActivity extends Activity {
+public class ChooseModeActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_registration);
-        CheckBox checkBox = (CheckBox)findViewById(R.id.checkBoxDriverMode);
-        final LinearLayout collapsibleLayout = (LinearLayout)findViewById(R.id.collapsible);
-        collapsibleLayout.setVisibility(View.GONE);
+        setContentView(R.layout.activity_choose_mode);
 
-        checkBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+        ImageButton driverMode = (ImageButton)findViewById(R.id.driverModeButton);
+        ImageButton passengerMode = (ImageButton)findViewById(R.id.passengerModeButton);
+
+        driverMode.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onCheckedChanged(CompoundButton compoundButton, boolean b) { //b=checked
-                if (b)
-                    collapsibleLayout.setVisibility(View.VISIBLE);
-
-                else
-                    collapsibleLayout.setVisibility(View.GONE);
+            public void onClick(View view) {
+                Intent i = new Intent(ChooseModeActivity.this, MapsActivity.class);
+                startActivity(i);
             }
         });
 
-        Button regButton = (Button)findViewById(R.id.registerButton2);
-        regButton.setOnClickListener(new View.OnClickListener() {
+        passengerMode.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(RegistrationActivity.this, WelcomeActivity.class);
+                Intent i = new Intent(ChooseModeActivity.this, FragmentDrawerActivity.class);
                 startActivity(i);
             }
         });
     }
 
-
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_, menu);
+        getMenuInflater().inflate(R.menu.menu_choose_mode, menu);
         return true;
     }
 
@@ -67,6 +59,4 @@ public class RegistrationActivity extends Activity {
 
         return super.onOptionsItemSelected(item);
     }
-
-
 }

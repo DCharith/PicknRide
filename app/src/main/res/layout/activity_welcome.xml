@@ -1,0 +1,73 @@
+
+<ViewSwitcher xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/viewSwitcher"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <RelativeLayout
+        android:background="#ffff8bfb"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"  >
+
+        <TextView
+            android:text="1st Page View"
+            android:id="@+id/t1"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textSize="20dp"
+            android:layout_marginTop="50dp"
+            android:textColor="#FFFFFF"
+            android:layout_centerHorizontal="true"/>
+
+        <Button
+            android:text="Next Page"
+            android:textColor="#FFFFFF"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/t1"
+            android:layout_marginTop="50dp"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/next"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:background="#ffd7fff1"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <TextView
+            android:text="2nd Page View"
+            android:id="@+id/t2"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textSize="20dp"
+            android:layout_marginTop="50dp"
+            android:textColor="#000000"
+            android:layout_centerHorizontal="true"/>
+
+        <Button
+            android:text="Previous Page"
+            android:textColor="#000000"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/t2"
+            android:layout_marginTop="50dp"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/previous"/>
+
+        <Button
+            android:text="Get Started"
+            android:textColor="#000000"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/t2"
+            android:layout_marginTop="50dp"
+            android:layout_toRightOf="@id/previous"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/getStarted"/>
+
+    </RelativeLayout>
+
+</ViewSwitcher>

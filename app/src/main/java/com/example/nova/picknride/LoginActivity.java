@@ -1,5 +1,6 @@
 package com.example.nova.picknride;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
@@ -10,7 +11,7 @@ import android.widget.Button;
 import android.widget.EditText;
 
 
-public class LoginActivity extends ActionBarActivity {
+public class LoginActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,7 +29,7 @@ public class LoginActivity extends ActionBarActivity {
                 GetData getData = new GetData();
                 try{
                     if (1==1){//long a = getData.execute(uname, pword).get()) {
-                        Intent i = new Intent(LoginActivity.this, MapsActivity.class);
+                        Intent i = new Intent(LoginActivity.this, FragmentDrawerActivity.class);
                         startActivity(i);
                     }
 
