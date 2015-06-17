@@ -66,7 +66,7 @@ class GetData extends AsyncTask<String, Integer, Long> {
             else{
             	a=0l;
             }
-
+            
         } catch (ClientProtocolException e) {
             // writing exception to log
             e.printStackTrace();
