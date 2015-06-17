@@ -1,6 +1,7 @@
 package com.example.nova.picknride;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.graphics.Color;
 import android.location.Address;
 import android.location.Geocoder;
@@ -133,6 +134,8 @@ public class MapsActivity extends FragmentActivity {
         drawPath.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Intent i = new Intent(MapsActivity.this, SelectDriverActivity.class);
+                startActivity(i);
 //                LatLng origin = markers.get(0);
 //                LatLng destination = markers.get(1);
 //                Log.d("LIST SIZE", Integer.toString(markers.size()));

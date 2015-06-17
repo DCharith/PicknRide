@@ -9,6 +9,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 
 public class LoginActivity extends Activity {
@@ -27,16 +28,18 @@ public class LoginActivity extends Activity {
                 String uname = userName.getText().toString();
                 String pword = password.getText().toString();
                 GetData getData = new GetData();
+
                 try{
-                    if (1==1){//long a = getData.execute(uname, pword).get()) {
+                    long a = getData.execute(uname, pword).get();
+                    if (a==1l){//long a = getData.execute(uname, pword).get()) {
                         Intent i = new Intent(LoginActivity.this, FragmentDrawerActivity.class);
                         startActivity(i);
+
                     }
 
 
                 }
                 catch (Exception e){
-
                 }
             }
         });

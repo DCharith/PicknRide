@@ -47,5 +47,6 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_fragment_drawer">FragmentDrawerActivity</string>
     <string name="title_activity_find_people">FindPeopleActivity</string>
+    <string name="title_activity_select_driver">SelectDriverActivity</string>
 
 </resources>

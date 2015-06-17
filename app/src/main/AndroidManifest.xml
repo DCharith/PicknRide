@@ -14,6 +14,7 @@
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
     <application
+        android:name=".AppController"
         android:allowBackup="true"
         android:icon="@mipmap/action_bar_icon"
         android:label="Pick n Ride"
@@ -62,9 +63,12 @@
             android:label="@string/title_activity_choose_mode" >
         </activity>
         <activity
-
             android:name=".FragmentDrawerActivity"
             android:label="" >
+        </activity>
+        <activity
+            android:name=".SelectDriverActivity"
+            android:label="@string/title_activity_select_driver" >
         </activity>
     </application>
 
