@@ -22,14 +22,15 @@ import org.apache.http.util.EntityUtils;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.util.Log;
+import android.widget.Toast;
 
 class GetData extends AsyncTask<String, Integer, Long> {
     protected Long doInBackground(String... data) {
-    	
+
     	long a=0;
     	HttpClient httpClient = new DefaultHttpClient();
         // Creating HTTP Post
-        HttpPost httpPost = new HttpPost("http://192.168.43.216:8080/PicknRide/rest/login/register/");
+        HttpPost httpPost = new HttpPost("http://192.168.43.203:12598/RESTMaven3/messages");
 
         Log.d("httpPost", "HttpPost ok");
         // Building post parameters
@@ -61,12 +62,13 @@ class GetData extends AsyncTask<String, Integer, Long> {
 
 //            if ("200".equals(baos.toString())){
             if (response.getStatusLine().getStatusCode()==200){
+//                Log.d("Response Code", response.getStatusLine().getStatusCode().);
             	a=1l;
             }
             else{
             	a=0l;
             }
-            
+
         } catch (ClientProtocolException e) {
             // writing exception to log
             e.printStackTrace();

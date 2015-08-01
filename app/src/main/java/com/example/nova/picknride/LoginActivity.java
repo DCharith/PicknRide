@@ -2,8 +2,8 @@ package com.example.nova.picknride;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -31,13 +31,14 @@ public class LoginActivity extends Activity {
 
                 try{
                     long a = getData.execute(uname, pword).get();
-                    if (a==1l){//long a = getData.execute(uname, pword).get()) {
+                    Log.d("A: ", Double.toString(a));
+                    if (a==1.0)
+                    {//long a = getData.execute(uname, pword).get()) {
                         Intent i = new Intent(LoginActivity.this, FragmentDrawerActivity.class);
                         startActivity(i);
-
                     }
-
-
+                    else
+                        Toast.makeText(getApplicationContext(), "Invalid User Name or Password", Toast.LENGTH_SHORT).show();
                 }
                 catch (Exception e){
                 }

@@ -7,18 +7,18 @@ import java.util.ArrayList;
 
 public class Driver {
     private String title, thumbnailUrl;
-    private int year;
+    //private int year;
     private double rating;
     private ArrayList<String> genre;
 
     public Driver() {
     }
 
-    public Driver(String name, String thumbnailUrl, int year, double rating,
+    public Driver(String name, String thumbnailUrl,  double rating,
                  ArrayList<String> genre) {
         this.title = name;
         this.thumbnailUrl = thumbnailUrl;
-        this.year = year;
+        //this.year = year;
         this.rating = rating;
         this.genre = genre;
     }
@@ -39,13 +39,13 @@ public class Driver {
         this.thumbnailUrl = thumbnailUrl;
     }
 
-    public int getYear() {
-        return year;
-    }
-
-    public void setYear(int year) {
-        this.year = year;
-    }
+//    public int getYear() {
+//        return year;
+//    }
+//
+//    public void setYear(int year) {
+//        this.year = year;
+//    }
 
     public double getRating() {
         return rating;

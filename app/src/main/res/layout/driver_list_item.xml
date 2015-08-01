@@ -3,6 +3,7 @@
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
     android:background="@drawable/driver_list_row_selector"
+    android:clickable="true"
     android:padding="8dp" >
 
     <!-- Thumbnail Image -->
@@ -45,13 +46,26 @@
         android:textSize="@dimen/genre" />
 
     <!-- Release Year -->
-    <TextView
-        android:id="@+id/releaseYear"
+
+    <!--<TextView-->
+        <!--android:id="@+id/releaseYear"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:layout_alignParentRight="true"-->
+        <!--android:textColor="@color/year"-->
+        <!--android:textSize="@dimen/year" />-->
+
+    <Button
+        android:id="@+id/chooseDriver"
+        android:text="Select Driver"
+        android:textSize="17dip"
+        android:textColor="@color/blue_app_background"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="25dip"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
-        android:textColor="@color/year"
-        android:textSize="@dimen/year" />
+        android:background="@drawable/select_driver_button"
+        />
 
 </RelativeLayout>

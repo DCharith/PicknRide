@@ -16,6 +16,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.android.volley.toolbox.ImageLoader;
@@ -54,7 +55,7 @@ public class DriverListAdapter extends BaseAdapter {
             inflater = (LayoutInflater) activity
                     .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         if (convertView == null)
-            convertView = inflater.inflate(R.layout.drawer_list_item, null);
+            convertView = inflater.inflate(R.layout.driver_list_item, null);
 
         if (imageLoader == null)
             imageLoader = AppController.getInstance().getImageLoader();
@@ -62,21 +63,24 @@ public class DriverListAdapter extends BaseAdapter {
                 .findViewById(R.id.thumbnail);
         TextView title = (TextView) convertView.findViewById(R.id.title);
         TextView rating = (TextView) convertView.findViewById(R.id.rating);
+        if(rating.getText()=="")
+            Log.d("Rating","RATING FIELD OK");
         TextView genre = (TextView) convertView.findViewById(R.id.genre);
-        TextView year = (TextView) convertView.findViewById(R.id.releaseYear);
+        //TextView year = (TextView) convertView.findViewById(R.id.releaseYear);
+        Button choose = (Button) convertView.findViewById(R.id.chooseDriver);
 
         // getting movie data for the row
         Driver m = driverItems.get(position);
 
         // thumbnail image
-        //thumbNail.setImageUrl(m.getThumbnailUrl(), imageLoader);
+        thumbNail.setImageUrl(m.getThumbnailUrl(), imageLoader);
 
         // title
         title.setText(m.getTitle());
         Log.d("rating", Double.toString(m.getRating()));
 
         // rating
-        //rating.setText("Rating: " + m.getRating());
+        rating.setText("Rating: " + m.getRating());
         // genre
         String genreStr = "";
         for (String str : m.getGenre()) {
@@ -84,7 +88,7 @@ public class DriverListAdapter extends BaseAdapter {
         }
         genreStr = genreStr.length() > 0 ? genreStr.substring(0,
                 genreStr.length() - 2) : genreStr;
-        //genre.setText(genreStr);
+        genre.setText(genreStr);
 
         // release year
         //year.setText(String.valueOf(m.getYear()));

@@ -71,7 +71,7 @@ public class SelectDriverActivity extends Activity {
                                 driver.setThumbnailUrl(obj.getString("image"));
                                 driver.setRating(((Number) obj.get("rating"))
                                         .doubleValue());
-                                driver.setYear(obj.getInt("releaseYear"));
+                                //driver.setYear(obj.getInt("releaseYear"));
 
                                 // Genre is json array
                                 JSONArray genreArry = obj.getJSONArray("genre");
