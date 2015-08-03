@@ -2,6 +2,7 @@ package com.example.nova.picknride;
 
 import android.app.Activity;
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.support.v7.app.ActionBarActivity;
@@ -9,6 +10,8 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 import com.android.volley.Response;
@@ -38,8 +41,6 @@ public class SelectDriverActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_select_driver);
-
-
         adapter = new DriverListAdapter(this, driverList);
         listView = (ListView)findViewById(R.id.driver_list);
         listView.setAdapter(adapter);
@@ -66,7 +67,7 @@ public class SelectDriverActivity extends Activity {
                             try {
 
                                 JSONObject obj = response.getJSONObject(i);
-                                Driver driver = new Driver();
+                                final Driver driver = new Driver();
                                 driver.setTitle(obj.getString("title"));
                                 driver.setThumbnailUrl(obj.getString("image"));
                                 driver.setRating(((Number) obj.get("rating"))
@@ -105,6 +106,20 @@ public class SelectDriverActivity extends Activity {
 
         // Adding request to request queue
         AppController.getInstance().addToRequestQueue(movieReq);
+
+
+
+//        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+//            @Override
+//            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+//                Intent intent = new Intent(SelectDriverActivity.this, ViewProfileActivity.class);
+//                intent.putExtra("thumbnailUrl", m.getThumbnailUrl());
+//                intent.putExtra("name", m.getTitle());
+//                intent.putExtra("rating", m.getRating());
+//                startActivity(intent);
+//                Driver d = adapterView.getSelectedItem().
+//            }
+//        });
 
 
     }

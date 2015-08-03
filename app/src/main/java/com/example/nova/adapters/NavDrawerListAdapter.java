@@ -48,7 +48,7 @@ package com.example.nova.adapters;
             if (convertView == null) {
                 LayoutInflater mInflater = (LayoutInflater)
                         context.getSystemService(Activity.LAYOUT_INFLATER_SERVICE);
-                convertView = mInflater.inflate(R.layout.drawer_list_item, null);
+                convertView = mInflater.inflate(R.layout.list_item_drawer, null);
             }
 
             ImageView imgIcon = (ImageView) convertView.findViewById(R.id.icon);

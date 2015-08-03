@@ -137,7 +137,7 @@ public class RegistrationActivity extends Activity {
     @Override
     protected Long doInBackground(String... data) {
         HttpClient httpClient = new DefaultHttpClient();
-        HttpPost httpPost = new HttpPost("http://192.168.43.203:12598/RESTMaven3/messages");
+        HttpPost httpPost = new HttpPost("http://192.168.1.2:12598/RESTMaven3/messages");
         httpPost.setHeader("Content-Type", "application/json");
         httpPost.setHeader("Accept", "application/json");
         JSONObject object = new JSONObject();

@@ -20,11 +20,23 @@ public class HomeFragment extends Fragment{
                              Bundle savedInstanceState) {
 
         View rootView = inflater.inflate(R.layout.fragment_home, container, false);
-        Button passengerMode = (Button)rootView.findViewById(R.id.driverModeButton2) ;
+        Button passengerMode = (Button)rootView.findViewById(R.id.passengerModeButton2) ;
         passengerMode.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(getActivity(), MapsActivity.class);
+                i.putExtra("driverMode", false);
+                startActivity(i);
+            }
+        });
+
+        Button driverMode = (Button)rootView.findViewById(R.id.driverModeButton2);
+        driverMode.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent i = new Intent(getActivity(), MapsActivity.class);
+                i.putExtra("driverMode", true);
                 startActivity(i);
             }
         });

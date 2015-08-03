@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollView" >
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:background="@color/blue_app_background"
+            android:orientation="vertical"
+            android:layout_height="fill_parent"
+            android:layout_width="match_parent">
+
+
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="156dp"
+                android:background="@drawable/driver_list_row_selector"
+                android:clickable="false"
+                android:padding="8dp">
+
+                <!-- Thumbnail Image -->
+                <com.android.volley.toolbox.NetworkImageView
+                    android:id="@+id/thumbnail"
+                    android:layout_width="140dp"
+                    android:layout_height="140dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginRight="8dp" />
+
+                <!-- Name -->
+                <TextView
+                    android:id="@+id/name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/thumbnail"
+                    android:layout_toRightOf="@+id/thumbnail"
+                    android:textSize="22dip"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black"/>
+
+                <!-- Rating -->
+                <TextView
+                    android:id="@+id/rating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/name"
+                    android:layout_marginTop="1dip"
+                    android:layout_toRightOf="@+id/thumbnail"
+                    android:textSize="19dip"
+                    android:textColor="@android:color/black"/>
+
+                <!-- Genre -->
+                <TextView
+                    android:id="@+id/genre"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/rating"
+                    android:layout_marginTop="5dp"
+                    android:layout_toRightOf="@+id/thumbnail"
+                    android:textColor="@color/genre"
+                    android:textSize="@dimen/genre" />
+
+
+
+                <Button
+                    android:id="@+id/view_profile"
+                    android:text="View Full Profile"
+                    android:textSize="22dip"
+                    android:textColor="@color/blue_app_background"
+                    android:layout_width="wrap_content"
+                    android:layout_height="27dip"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/button_style"
+                    android:padding="4dp"
+                    android:layout_margin="2dp"
+                    />
+
+            </RelativeLayout>
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:layout_marginTop="12dp"
+                android:background="@color/blue_app_background">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_margin="8dp"
+                    android:text="Route: X-Y"
+                    android:textSize="20dp"
+                    android:textColor="@color/genre"
+                    android:id="@+id/start_to_end"/>
+                <View style="@style/Divider"></View>
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_margin="8dp"
+                    android:text="Date/Days: Monday-Friday"
+                    android:textSize="20dp"
+                    android:textColor="@color/genre"
+                    android:id="@+id/date"/>
+                <View style="@style/Divider"></View>
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_margin="8dp"
+                    android:text="Time: 4pm-5pm"
+                    android:textSize="20dp"
+                    android:textColor="@color/genre"
+                    android:id="@+id/time"/>
+                <View style="@style/Divider"></View>
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_margin="8dp"
+                    android:text="Seats Available: 3"
+                    android:textSize="20dp"
+                    android:textColor="@color/genre"
+                    android:id="@+id/slots_available"/>
+                <View style="@style/Divider"></View>
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_margin="8dp"
+                    android:text="Payment: 25Rs/Km"
+                    android:textSize="20dp"
+                    android:textColor="@color/genre"
+                    android:id="@+id/payment"/>
+                <View style="@style/Divider"></View>
+
+                <Button
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button_style"
+                    android:layout_margin="8dp"
+                    android:textSize="22dip"
+                    android:textColor="@color/blue_app_background"
+                    android:text="View Route On Map"/>
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:background="@drawable/select_driver_button"
+                    android:text="Request Ride"
+                    android:textColor="@color/blue_app_background"
+                    android:textSize="22dip"
+                    android:layout_margin="8dp"
+                    android:layout_gravity="end"
+                   />
+
+
+
+            </LinearLayout>
+
+
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

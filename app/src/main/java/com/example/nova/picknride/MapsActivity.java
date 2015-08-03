@@ -130,17 +130,26 @@ public class MapsActivity extends FragmentActivity {
         });
 
 
-        Button drawPath = (Button)findViewById(R.id.drawPath);
-        drawPath.setOnClickListener(new View.OnClickListener() {
+        Button proceedButton = (Button)findViewById(R.id.proceed_button);
+        Intent intent = getIntent();
+        final Bundle bundle = intent.getExtras();
+        proceedButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(MapsActivity.this, SelectDriverActivity.class);
-                startActivity(i);
+                if(bundle.getBoolean("driverMode")==false) {
+                    Intent i = new Intent(MapsActivity.this, SelectDriverActivity.class);
+                    startActivity(i);
 //                LatLng origin = markers.get(0);
 //                LatLng destination = markers.get(1);
 //                Log.d("LIST SIZE", Integer.toString(markers.size()));
 //                String url = makeURL(origin.latitude, origin.longitude, origin.latitude, origin.longitude);
 //                new connectAsyncTask(url).execute();
+                }
+                else{
+                    Intent i = new Intent(MapsActivity.this, ViewProfileActivity.class);
+                    startActivity(i);
+                }
+
             }
         });
 

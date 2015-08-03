@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollView" >
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:background="@color/blue_app_background"
+            android:orientation="vertical"
+            android:layout_height="fill_parent"
+            android:layout_width="match_parent">
+
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:layout_marginTop="12dp"
+                android:background="@color/blue_app_background">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent">
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_margin="8dp"
+                        android:text="Route: X-Y"
+                        android:textSize="20dp"
+                        android:textColor="@color/genre"
+                        android:id="@+id/start_to_end"/>
+                </LinearLayout>
+
+                <View style="@style/Divider"></View>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent">
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_margin="8dp"
+                        android:text="Date/Days: Monday-Friday"
+                        android:textSize="20dp"
+                        android:textColor="@color/genre"
+                        android:id="@+id/date"/>
+
+                </LinearLayout>
+
+                <View style="@style/Divider"></View>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent">
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_margin="8dp"
+                        android:text="Time: 4pm-5pm"
+                        android:textSize="20dp"
+                        android:textColor="@color/genre"
+                        android:id="@+id/time"/>
+                </LinearLayout>
+
+                <View style="@style/Divider"></View>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent">
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_margin="8dp"
+                        android:text="Seats Available: 3"
+                        android:textSize="20dp"
+                        android:textColor="@color/genre"
+                        android:id="@+id/slots_available"/>
+                </LinearLayout>
+
+                <View style="@style/Divider"></View>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent">
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_margin="8dp"
+                        android:text="Payment: 25Rs/Km"
+                        android:textSize="20dp"
+                        android:textColor="@color/genre"
+                        android:id="@+id/payment"/>
+                </LinearLayout>
+                <View style="@style/Divider"></View>
+
+                <Button
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button_style"
+                    android:layout_margin="8dp"
+                    android:textSize="22dip"
+                    android:textColor="@color/blue_app_background"
+                    android:text="View Route On Map"/>
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:background="@drawable/select_driver_button"
+                    android:text="Publish Ride"
+                    android:textColor="@color/blue_app_background"
+                    android:textSize="22dip"
+                    android:layout_margin="8dp"
+                    android:layout_gravity="end"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

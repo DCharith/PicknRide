@@ -70,6 +70,10 @@
             android:name=".SelectDriverActivity"
             android:label="@string/title_activity_select_driver" >
         </activity>
+        <activity
+            android:name=".ViewProfileActivity"
+            android:label="@string/title_activity_view_profile" >
+        </activity>
     </application>
 
 </manifest>

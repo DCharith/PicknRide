@@ -3,8 +3,10 @@
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
     android:background="@drawable/driver_list_row_selector"
-    android:clickable="true"
-    android:padding="8dp" >
+    android:clickable="false"
+    android:descendantFocusability="blocksDescendants"
+    android:padding="8dp"
+    android:id="@+id/driver_list_item">
 
     <!-- Thumbnail Image -->
     <com.android.volley.toolbox.NetworkImageView
@@ -58,7 +60,7 @@
 
     <Button
         android:id="@+id/chooseDriver"
-        android:text="Select Driver"
+        android:text="Request Ride"
         android:textSize="17dip"
         android:textColor="@color/blue_app_background"
         android:layout_width="wrap_content"
@@ -66,6 +68,8 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
         android:background="@drawable/select_driver_button"
+        android:focusable="false"
+        android:clickable="false"
         />
 
 </RelativeLayout>
